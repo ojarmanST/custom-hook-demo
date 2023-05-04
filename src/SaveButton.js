@@ -1,4 +1,4 @@
-import { useOnlineStatus } from "./useOnlineStatus.js";
+import useOnlineStatus from "./useOnlineStatus";
 
 export default function SaveButton() {
   const isOnline = useOnlineStatus();

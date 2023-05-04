@@ -1,7 +1,12 @@
 import React from "react";
 import { useEffect, useState } from "react";
 
-export default function useOnlineStatus() {
+/*
+ * All of the reusable logic for useOnlineStatus is here,
+ * while SaveButton and StatusBar have access to the useOnlineStatus() hook
+ * which in this case will return a boolean
+ */
+function useOnlineStatus() {
   const [isOnline, setIsOnline] = useState(true);
 
   useEffect(() => {
@@ -21,3 +26,5 @@ export default function useOnlineStatus() {
 
   return isOnline;
 }
+
+export default useOnlineStatus;
